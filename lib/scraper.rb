@@ -11,9 +11,10 @@ class Scraper
 
     doc.css(".post").each do |post|
       course = Course.new
-    doc.css(".post").first.css("h2").text
-    doc.css(".post").first.css(".date").text
-    doc.css(".post").first.css("p").text
+      course.title = post.css("h2").text
+      course.schedule = post.css(".date").text
+      course.title = post.css("h2").text
+
 
     binding.pry
   end
